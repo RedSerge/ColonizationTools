@@ -88,7 +88,7 @@ This tool modifies the selected save file in one of different ways:
 -	After the War of Succession finish, if it’s possible to declare the independence: provides the alternative scenario to declare the independence. There’s no hall of fame [don’t expect your score to be recorded alongside ones achieved under traditional rules]; no Intervention from other European power, all treaties between you and your rivals are kept untouched, moreover, you can’t talk to them or seize their colonies yet they can attack you.
 -	After the War of Independence victory: provides the way to recover back to the state 2, with “suspended” War of Succession.
 
-Why should my rivals be eliminated when my colonial empire is ready to declare an independence? Why should I be the only one that got eliminated after 1600 AD w/o colonies? Why should my rivals got “frozen” once I declare the independence? Well, this cornerstone tool solves those questions once and for all, as it provides new terms and new set of rules to change the game flow. The usual scenario of usage for my toolset is as in the example below:
+Why should my rivals be eliminated when my colonial empire is ready to declare an independence? Why should I be the only one that got eliminated after 1600 AD w/o colonies? Why should my rivals got “frozen” once I declare the independence? Well, this cornerstone tool solves those questions once and for all, as it provides new terms and new set of rules to change the game flow. As of my toolset, the usual scenario of usage is as in the example below:
 
 1)	Run LEADER.EXE to randomize the rivals. Run “TAXPATCH.EXE 75” to restore the taxation mechanics.
 2)	Start the game, save it at slot #0, before the very first step (1492 AD), run TERMS.EXE to suspend the War of Succession.
