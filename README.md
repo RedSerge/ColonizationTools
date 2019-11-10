@@ -34,19 +34,25 @@ The Civilization game is popular for its ability to win by different matters, mi
 
 Of course, the rules are stricter than for the NPCs, you know :) . 80 colonists (citizens living in the colonies, no army or roaming units) must strictly (no percent rounding, no Simon Bolivar effect, no nonsense) support the idea of the Independence. The rebels per colony are counted this way: Size of colony * real rebel percent (w/o effects provided by Simon Bolivar).
 
-### 3)	“Repaint” and “Reality” fix tools.
+### 3)	“Repaint”, “Reality” & "Hotseat" fix tools.
 
 **`REALITY.EXE [n]`**
 
 **`REPAINT.EXE [nefsd]`**
 
+**`HOTSEAT.EXE [nwxyz]`**
+
 *n = 0..9, number of save file [COLONY0n.sav], default value = 0.*
 
 *e, f, s, d  = 0..3, new master of current English, French, Spanish and Dutch colonies, correspondingly. Default values: 1,2,3 and 0.*
 
+*w, x, y, z = 0..2, the state of the control for English, French, Spanish and Dutch player, correspondingly, where 0 = controlled by player, 1 = controlled by computer, 2 = "frozen" (not moving). Default value for each parameter: 1.*
+
 REPAINT.EXE reads the selected save file and provides its colonies another master along with parameters. For example, “REPAINT.EXE 21201” changes COLONY02.SAV (2) in such a way, that English and Dutch colonies are now belonging to French (1), French – to Spanish (2), Spanish – to English (0). No units are updated, though – that’s where REALITY.EXE comes to the rescue.
 
 REALITY.EXE reads the selected save file and checks whether the units in each colony match its allegiance. I made this tool as a separate one, as I had a bug once when the Tory colony produces colonist which somehow is Rebel. I fortified the unit and … never was able to get that colony back! I attacked it and went right through it. This fix helped me to correct the bug and still win :) .
+
+HOTSEAT.EXE can be used to allow more than one European power to be controlled by player. It may be useful for various tests, fixes and, of course, Hot Seat Multiplayer mode :) .
 
 ### 4)	*“This is taxation without representation! Unfair!”*
 
