@@ -73,7 +73,7 @@ Copies [COLONY0x.sav] to [COLONY0z.sav], checking along the way the colonies sto
 Well, this is ultimate cheating tool to abuse the game :) . I actually made it for two reasons: to eliminate atrocities against the natives made by another European powers – to be able to come back in time without losing the progress that was made along the way yet keep the natives and their ecosystem alive. I hate eliminating natives, as you already could have guessed :) …
 …Another usage example: as some kind of a sci-fi Time Warp :) , where I can “teleport” my colonies between games, on another “planet”. Just for fun :) .
 
-Be careful, though, that colony (stored in COLONY0y.sav) allegiance and the territory where it resides should match each other (like, "English" colony stays at "*New England*", or whatever the name is... hope you got the point) before applying the Time Warp, or some nasty bugs may occur later (Tory Expeditionary Forces stay home, etc). 
+Be careful, though, that colony (stored in COLONY0y.sav) allegiance and the territory where it resides should match each other (like, "English" colony stays at "*New England*", or whatever the name is... hope you got the point) before applying the Time Warp, or some nasty bugs may occur later (Tory Expeditionary Forces stay home, etc). Proceed with caution, use at your own risk, *et cetera, et cetera...* :) 
 
 ### 6)	Colonies can’t be built during the War of Independence – but what about “after the War”?
 
