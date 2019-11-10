@@ -83,10 +83,10 @@ Toggles the rebel/tory mode of the selected save file if the War of Independence
 
 This tool modifies the selected save file in one of different ways:
 
-1)	Before the War of Succession event: «suspends» the War of Succession, preventing the elimination of the weakest European power as well as ability to declare the Independence properly.
-2)	After the War of Succession “suspension”, if the current in-game date is not before 1600 AD, and at least one European power has no colonies: restores the original state of the War of Succession.
-3)	After the War of Succession finish, if it’s possible to declare the independence: provides the alternative scenario to declare the independence. There’s no hall of fame [don’t expect your score to be recorded alongside ones achieved under traditional rules]; no Intervention from other European power, all treaties between you and your rivals are kept untouched, moreover, you can’t talk to them or seize their colonies yet they can attack you.
-4)	After the War of Independence victory: provides the way to recover back to the state 2, with “suspended” War of Succession.
+-	Before the War of Succession event: «suspends» the War of Succession, preventing the elimination of the weakest European power as well as ability to declare the Independence properly.
+-	After the War of Succession “suspension”, if the current in-game date is not before 1600 AD, and at least one European power has no colonies: restores the original state of the War of Succession.
+-	After the War of Succession finish, if it’s possible to declare the independence: provides the alternative scenario to declare the independence. There’s no hall of fame [don’t expect your score to be recorded alongside ones achieved under traditional rules]; no Intervention from other European power, all treaties between you and your rivals are kept untouched, moreover, you can’t talk to them or seize their colonies yet they can attack you.
+-	After the War of Independence victory: provides the way to recover back to the state 2, with “suspended” War of Succession.
 
 Why should my rivals be eliminated when my colonial empire is ready to declare an independence? Why should I be the only one that got eliminated after 1600 AD w/o colonies? Why should my rivals got “frozen” once I declare the independence? Well, this cornerstone tool solves those questions once and for all, as it provides new terms and new set of rules to change the game flow. The usual scenario of usage for my toolset is as in the example below:
 
@@ -99,4 +99,4 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 7)	Win the War. 
 8)	[Additional step] Run TERMS.EXE twice to recover your “colonial” status and continue playing. Run TAXPATCH.EXE to block the taxation (you’re independent, after all! :) ). Play till the War of Succession on the next step. Use SWITCH.EXE to select the appropriate mode (keep that fancy rebel USA flag :) – or do some business, like signing peace treaty with rivals or building new colony, for example).
 9)	[Unnecessary step] Manipulate the allegiance of the colonies via REPAINT.EXE and REALITY.EXE, if needed. Run “TIMEWRAP.EXE 102”, load the save game from slot #2 and watch your colonists travel through time :) .
-10)	[Necessary step] Have fun! :)
+10)	[Necessary step] **Have fun!** :)
