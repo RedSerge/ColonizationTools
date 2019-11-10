@@ -73,6 +73,8 @@ Copies [COLONY0x.sav] to [COLONY0z.sav], checking along the way the colonies sto
 Well, this is ultimate cheating tool to abuse the game :) . I actually made it for two reasons: to eliminate atrocities against the natives made by another European powers – to be able to come back in time without losing the progress that was made along the way yet keep the natives and their ecosystem alive. I hate eliminating natives, as you already could have guessed :) …
 …Another usage example: as some kind of a sci-fi Time Warp :) , where I can “teleport” my colonies between games, on another “planet”. Just for fun :) .
 
+Be careful, though, that colony (stored in COLONY0y.sav) allegiance and the territory where it resides should match each other (like, "English" colony stays at "*New England*", or whatever the name is... hope you got the point) before applying the Time Warp, or some nasty bugs may occur later (Tory Expeditionary Forces stay home, etc). 
+
 ### 6)	Colonies can’t be built during the War of Independence – but what about “after the War”?
 
 **`SWITCH.EXE [n]`**
@@ -104,5 +106,5 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 6)	In any case, sign peace with all the European powers and run TERMS.EXE to declare an independence.
 7)	Win the War. 
 8)	[Additional step] Run TERMS.EXE twice to recover your “colonial” status and continue playing. Run TAXPATCH.EXE to block the taxation (you’re independent, after all! :) ). Play till the War of Succession on the next step. Use SWITCH.EXE to select the appropriate mode (keep that fancy rebel USA flag :) – or do some business, like signing peace treaty with rivals or building new colony, for example).
-9)	[Unnecessary step] Manipulate the allegiance of the colonies via REPAINT.EXE and REALITY.EXE, if needed. Run “TIMEWRAP.EXE 102”, load the save game from slot #2 and watch your colonists travel through time :) .
+9)	[Unnecessary step] Manipulate the allegiance of the colonies via REPAINT.EXE, HOTSEAT.EXE and REALITY.EXE, if needed. Run “TIMEWRAP.EXE 102”, load the save game from slot #2 and watch your colonists travel through time :) .
 10)	[Necessary step] **Have fun!** :)
