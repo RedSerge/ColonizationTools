@@ -30,7 +30,7 @@ As a result, each new game can have different set of leaders. Just launch LEADER
 
 Reads COLONY0n.sav and check the conditions to grant independence. If those conditions are achieved, Parliament disbands the Expeditionary Forces, allowing to win without bloodshed.
 
-The Civilization game is popular for its ability to win by different matters, militant and civilized. The Colonization, however, enforces the great big battle at the end upon the player. Meanwhile, the computer-controlled European rivals are always got their independence granted by their Motherland for development. Why not to bring those rules into consideration for the player, too?
+The Civilization game is popular for its ability to win by different matters, militant and civilized. The Colonization, however, enforces the Great Big battle at the end upon the player. Meanwhile, the computer-controlled European rivals are always got their independence granted by their Motherland as a result of development. Why not to bring those rules into consideration for the player, too?
 
 Of course, the rules are stricter than for the NPCs, you know :) . 80 colonists (citizens living in the colonies, no army or roaming units) must strictly (no percent rounding, no Simon Bolivar effect, no nonsense) support the idea of the Independence. The rebels per colony are counted this way: Size of colony * real rebel percent (w/o effects provided by Simon Bolivar).
 
