@@ -20,7 +20,7 @@ Reads NAMES.OLD, expands it with randomly generated (different) lines describing
 
 NAMES.OLD provided along with this toolbox improves the power of the natives; to use original settings, just copy NAMES.TXT over NAMES.OLD before launching LEADER.EXE.
 
-As a result, each new game can have different set of leaders. Just launch LEADER.EXE before starting the new game.
+As a result, each new game can have different set of leaders. Just launch LEADER.EXE before starting a new game.
 
 ### 2)	Grant the independence:
 
