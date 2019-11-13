@@ -111,7 +111,7 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 
 ### 8) Native tribe enforcement.
 
-**`NATIVE.EXE [n] [T] [H]`**
+**`NATIVES.EXE [n] [T] [H]`**
 
 *n = 0..9, number of save file [COLONY0n.sav], default value = 0.*
 
