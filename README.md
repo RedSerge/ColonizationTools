@@ -105,7 +105,7 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 5)	[Additional step] Run GRANT.EXE, if in peaceful mode and don’t want to actually fight with these pesky Tories :) . Just be sure to reach the conditions. 
 6)	In any case, sign peace with all the European powers and run TERMS.EXE to declare an independence.
 7)	Win the War. 
-8)	[Additional step] Run TERMS.EXE twice to recover your “colonial” status and continue playing. Run TAXPATCH.EXE to block the taxation (you’re independent, after all! :) ). Play till the War of Succession on the next step. Use SWITCH.EXE to select the appropriate mode (keep that fancy rebel USA flag :) – or do some business, like signing peace treaty with rivals or building new colony, for example).
+8)	[Additional step] Run TERMS.EXE to recover your “colonial” status, run it once again to enable the War of Succession. Run TAXPATCH.EXE to block the taxation (you’re independent, after all! :) ). Play till the War of Succession on the next step. Use SWITCH.EXE to select the appropriate mode (keep that fancy rebel USA flag :) – or do some business, like signing peace treaty with rivals or building new colony, for example).
 9)	[Unnecessary step] Manipulate the allegiance of the colonies via REPAINT.EXE, HOTSEAT.EXE and REALITY.EXE, if needed. Run “TIMEWRAP.EXE 102”, load the save game from slot #2 and watch your colonists travel through time :) .
 10)	[Necessary step] **Have fun!** :)
 
