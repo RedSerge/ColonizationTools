@@ -66,7 +66,7 @@ Changes VICEROY.EXE procedure that controls the tax rate when the King visits vi
 
 **`TIMEWARP.EXE [xyz]`**
 
-*x, y, z = 0..9, number of save file [COLONY0n.sav], default value = 0, 1 and 2, correspondingly.*
+*x, y, z = 0..9, number of save file [COLONY0n.sav], default values = 0, 1 and 2, correspondingly.*
 
 Copies [COLONY0x.sav] to [COLONY0z.sav], checking along the way the colonies stored in [COLONY0y.sav]. For each colony that locates at the same position on the map as the corresponding colony in [COLONY0x.sav] and belongs to the same European Power, the colony internal information (except its name) is stored in [COLONY0z.sav]. All “tory uprising” flags are dropped, allowing Tory to start colonial rebellion once again (just because I love to give second chances :) ).
 
@@ -108,3 +108,13 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 8)	[Additional step] Run TERMS.EXE twice to recover your “colonial” status and continue playing. Run TAXPATCH.EXE to block the taxation (you’re independent, after all! :) ). Play till the War of Succession on the next step. Use SWITCH.EXE to select the appropriate mode (keep that fancy rebel USA flag :) – or do some business, like signing peace treaty with rivals or building new colony, for example).
 9)	[Unnecessary step] Manipulate the allegiance of the colonies via REPAINT.EXE, HOTSEAT.EXE and REALITY.EXE, if needed. Run “TIMEWRAP.EXE 102”, load the save game from slot #2 and watch your colonists travel through time :) .
 10)	[Necessary step] **Have fun!** :)
+
+### 8) Native tribe enforcement.
+
+**`NATIVE.EXE [n] [T] [H]`**
+
+*n = 0..9, number of save file [COLONY0n.sav], default value = 0.*
+
+*T, H = 0..255, the power of the settlement, default values = 9 and 1, correspondingly.*
+
+This tool changes the native settlements (tribes) from selected save file; for each settlement that is H (or less) hits away from destruction, sets the number of hits to T. For example, "NATIVE.EXE 1 255 255" sets the most possible level of protection for each tribe at slot #1.
