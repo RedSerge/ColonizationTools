@@ -7,7 +7,7 @@
 
 This little project happened overnight when I had no Internet connection to play my favorite games - just USB Flash with random stuff, and DOSBox (along with Colonization and Turbo Pascal) was among it, somehow.
 
-It’s always fun to play Sid Meier’s strategy games, but it’s usually even more fun to update them with some ideas or scenarios of my own, extending the playtime. So, I made my personal toolbox for this purpose. Hastily written code is not an example of the most clean and effective programming, yet it achieved its purpose of bringing me some fun – and be useful for its purpose, that’s why I decided to share this spontaneous stuff.
+It’s always fun to play Sid Meier’s strategy games, but it’s usually even more fun to update them with some ideas or scenarios of my own, extending the playtime. So, I made my personal toolbox for this purpose. Hastily written code is not an example of the most clean and effective programming, yet it achieved its purpose of bringing me some fun – and be pretty useful along the way, that’s why I decided to share this spontaneous stuff.
 
 Anyway… Let me list it and describe how to use it (first of all, extract all the binary files from BIN.ZIP to the folder with your Colonization game).
 
