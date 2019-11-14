@@ -1,6 +1,8 @@
 #Recover every native tribe (from slot #0) that's possible to place w/o conflicts
 #At slot #1, saving the result at slot #2.  
 
+# {"Dirty" implementation, w/o statistics correction for Indian Adviser}.
+
 #Slot w/native tribes
 SLOT_ELDER  =	0
 #Slot w/current status
@@ -79,5 +81,7 @@ for i in d1.Tribe:
 		d0.Tribe+=[i]
 		for j in range(4):
 			d0.Maps[j][z]=d1.Maps[j][z]
+
+#d0.Middle=d1.Middle  -- Should work with this part to correct statistics for Indian Adviser.
 
 d0.drop(SLOT_RESULT)
