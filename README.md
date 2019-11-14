@@ -118,3 +118,5 @@ Why should my rivals be eliminated when my colonial empire is ready to declare a
 *T, H = 0..255, the power of the settlement, default values = 9 and 1, correspondingly.*
 
 This tool changes the native settlements (tribes) from selected save file; for each settlement that is H (or less) hits away from destruction, sets the number of hits to T. For example, "NATIVE.EXE 1 255 255" sets the most possible level of protection for each tribe at slot #1.
+
+*P.S.: check also "tribes" Python script that allows to "recover" native tribes.*
