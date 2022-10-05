@@ -747,12 +747,10 @@ def main():
 	
 	pc = pcs(f)
 	result = search(b, pc, load_task(b))
-	if not result:
-		return
-	assassin, lvl = result
-	
-	if lvl > 0:
-		action(b, assassin, lvl, pc)
+	if result:
+		assassin, lvl = result	
+		if lvl > 0:
+			action(b, assassin, lvl, pc)
 	
 	unify_f(f, b)
 	f.save(0)
