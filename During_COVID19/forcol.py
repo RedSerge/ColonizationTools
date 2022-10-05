@@ -23,9 +23,9 @@ def rndpatch():
 				f.write(cnt)
 			print("Patched.")
 
-#rndpatch(); exit() -- not my idea; Randomizer for Colonization
+#rndpatch(); exit() #-- not my idea; Randomizer for Colonization
 
-#taxpatch(); exit() -- my idea; No-Taxes Mode for Colonization
+#taxpatch(); exit() #-- my idea; No-Taxes Mode for Colonization
 
 ABBR = ["in", "az", "ar", "ir", "ch", "ap", "si", "tu"]
 BASE = 4
@@ -89,7 +89,7 @@ def col2tribe(f):
 				split_tribes += [new_tribe(i[0], i[1], nation, i[0x1F] * 3)]
 				pos = xy[1] * 58 + xy[0]
 				split_maps[1][pos] = 0b10
-				split_maps[2][pos] = int(flags, 2) #0b01100010
+				split_maps[2][pos] = int(flags, 2)
 				continue
 		all_info += i
 	
@@ -124,18 +124,18 @@ class bits:
 
 class col:
 	
-	def short(self, n, m = None, signed = False):
+	def short(self, n, m = None, signed = False, length = 2):
 		if m is None:
 			m = n
-		res = [self.raw[i : i + 2] for i in range(n, m + 1, 2)]
+		res = [self.raw[i : i + length] for i in range(n, m + 1, length)]
 		return [int.from_bytes(i, byteorder = 'little', signed = signed) for i in res]
 	
-	def save_short(self, n, vals, signed = False):		
-		res = [i.to_bytes(2, byteorder = 'little', signed = signed) for i in vals]
+	def save_short(self, n, vals, signed = False, length = 2):
+		res = [i.to_bytes(length, byteorder = 'little', signed = signed) for i in vals]
 		l = n
 		for i, j in enumerate(res):	
-			self.raw[l : l + 2] = j
-			l += 2
+			self.raw[l : l + length] = j
+			l += length
 	
 	def hex(self, n, m = None):
 		if m is None:
@@ -298,53 +298,57 @@ def tax(f, n, v):
 def prompt(s):
 	return input(s).lower().startswith('y')
 
-f = col(0)
-if not col2tribe(f):
-	status = f.bits(18)
+def main_routine():
+	f = col(0)
+	if not col2tribe(f):
+		status = f.bits(18)
 
-	succession = f.short(0x62, signed = True)[0]
-	if succession < 0:	
-		if prompt(f"Do you want to suspend the War of Succession? (y/n) "):
-			succession = 10
-			print("War of Succession has been suspended.")
-	elif succession == 10:
-		year = f.short(0x1A, signed = True)[0]
-		if year < 1600:
-			print("War of Succession can't be restarted before 1600 AD.")
-		elif check_colonies(f):
-			print("Every rival has at least one colony. War of Succession can't be restarted.")
-		else:
-			if prompt(f"Do you want to restart the War of Succession? (y/n) "):
-				succession = -1
-				print("War of Succession has been restarted.")
-	else:
-		print("War of Succession has already been finished.")
-		player = None
-		status_addr = (0xCF, 0x103, 0x137, 0x16B)
-		npc_status = [f.hex(i)[0] for i in status_addr]
-		if 0 in npc_status:
-			player = npc_status.index(0)
-			if rebels(f, player):
-				f.save_short(0x6A, [0, 0, 0, 0])
-			if status[3] == 1:
-				print("You've won the War of Independence!")			
-				if status[0] != 0:				
-					status[0] = 0	
+		succession = f.short(0x62, signed = True)[0]
+		if succession < 0:	
+			if prompt(f"Do you want to suspend the War of Succession? (y/n) "):
+				succession = 10
+				print("War of Succession has been suspended.")
+		elif succession == 10:
+			year = f.short(0x1A, signed = True)[0]
+			if year < 1600:
+				print("War of Succession can't be restarted before 1600 AD.")
+			elif check_colonies(f):
+				print("Every rival has at least one colony. War of Succession can't be restarted.")
+			else:
+				if prompt(f"Do you want to restart the War of Succession? (y/n) "):
 					succession = -1
-					npc_status = [i if i != 2 else 1 for i in npc_status]				
-					[f.save_hex(j, [npc_status[i]]) for i, j in enumerate(status_addr)]
-					riots(f)
-				tax(f, player, 0x83) # -125 % if taxes are positive			
-				a = tribeforce(f) * 5
-				if a >= 100 and prompt(f"Do you want to help indian people for {a} amounts of food? (y/n) "):
-					tribeforce(f, True)
-					food(f, player, a)
+					print("War of Succession has been restarted.")
 		else:
-			print("There's no player.")
+			print("War of Succession has already been finished.")
+			player = None
+			status_addr = (0xCF, 0x103, 0x137, 0x16B)
+			npc_status = [f.hex(i)[0] for i in status_addr]
+			if 0 in npc_status:
+				player = npc_status.index(0)
+				if rebels(f, player):
+					f.save_short(0x6A, [0, 0, 0, 0])
+				if status[3] == 1:
+					print("You've won the War of Independence!")			
+					if status[0] != 0:				
+						status[0] = 0	
+						succession = -1
+						npc_status = [i if i != 2 else 1 for i in npc_status]				
+						[f.save_hex(j, [npc_status[i]]) for i, j in enumerate(status_addr)]
+						riots(f)
+					tax(f, player, 0x83) # -125 % if taxes are positive			
+					a = tribeforce(f) * 5
+					if a >= 100 and prompt(f"Do you want to help indian people for {a} amounts of food? (y/n) "):
+						tribeforce(f, True)
+						food(f, player, a)
+			else:
+				print("There's no player.")
 
-	f.save_hex(50, [0]) # hide map
-	f.save_bits(18, status)
-	f.save_short(0x62, [succession], signed = True)
-else:
-	print("The Indian Extended Aid Initiative has been activated.")
-f.save(1)
+		f.save_hex(50, [0]) # hide map
+		f.save_bits(18, status)
+		f.save_short(0x62, [succession], signed = True)
+	else:
+		print("The Indian Extended Aid Initiative has been activated.")
+	f.save(1)
+
+if __name__ == '__main__':
+	main_routine()
