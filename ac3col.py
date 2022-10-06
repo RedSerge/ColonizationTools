@@ -391,7 +391,7 @@ def load_task(bunch):
 def task(bunch, x0=None, y0=None, in_euro=False):
 	intro, colonies, units, nations, tribes, middle, maps, final = bunch
 	
-	euro_place = [] if in_euro else [0, 0]
+	euro_place = [] if in_euro else [(0, 0)]
 	
 	col_xy = task_supp(colonies, x0, y0)
 	tribe_xy = task_supp(tribes, x0, y0)
@@ -427,6 +427,7 @@ def task(bunch, x0=None, y0=None, in_euro=False):
 		return
 	
 	final_id = choice(final_ids)
+	final_id = final_ids[-1]
 	final_choice = choice(results[final_id])
 	encode = f"{final_id}{apply_sys(final_choice[0], hex, 2)}{apply_sys(final_choice[1], hex, 2)}"
 	
