@@ -427,7 +427,6 @@ def task(bunch, x0=None, y0=None, in_euro=False):
 		return
 	
 	final_id = choice(final_ids)
-	final_id = final_ids[-1]
 	final_choice = choice(results[final_id])
 	encode = f"{final_id}{apply_sys(final_choice[0], hex, 2)}{apply_sys(final_choice[1], hex, 2)}"
 	
