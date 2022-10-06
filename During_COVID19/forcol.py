@@ -348,7 +348,7 @@ def main_routine():
 		f.save_short(0x62, [succession], signed = True)
 	else:
 		print("The Indian Extended Aid Initiative has been activated.")
-	f.save(1)
+	f.save(0)
 
 if __name__ == '__main__':
 	main_routine()
